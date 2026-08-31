@@ -44,7 +44,7 @@ shell with your models loaded:
 After editing the model files, you'll probably want to edit the
 application file (+app.rb+).  You'll also want to rename and edit the example
 routing subtree (+routes/prefix1.rb+).  After that, you'll probably want to
-edit the layout (+views/layout.erb+) and index page (+views/index.erb+), as
+edit the layout (+views/layout.slim+) and index page (+views/index.slim+), as
 well as add any other views.
 
 After making those changes, you can start your application using +rackup+

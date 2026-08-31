@@ -115,7 +115,7 @@ describe 'roda-sequel-stack' do
         "./models.rb", "./models/model1.rb", "./routes/prefix1.rb", "./spec/coverage_helper.rb",
         "./spec/minitest_helper.rb", "./spec/model.rb", "./spec/model/model1_spec.rb",
         "./spec/model/spec_helper.rb", "./spec/web.rb", "./spec/web/prefix1_spec.rb",
-        "./spec/web/spec_helper.rb", "./views/index.erb", "./views/layout.erb"
+        "./spec/web/spec_helper.rb", "./views/index.slim", "./views/layout.slim"
       ]
 
       rewrite('migrate/001_tables.rb') do |s|
@@ -133,7 +133,7 @@ describe 'roda-sequel-stack' do
       end
       
       Dir.mkdir('views/prefix1')
-      File.binwrite('views/prefix1/p1.erb', "<p>Model1: <%= Model1.first.name %></p>")
+      File.binwrite('views/prefix1/p1.slim', 'p= "Model1: #{Model1.first.name}"')
       rewrite('routes/prefix1.rb'){|s| s.sub("# /prefix1 branch handling", "r.get{view 'p1'}")}
       environments.each do |env|
         run_cmd(SEQUEL, "#{db_url}_#{env}", '-c', "DB[:model1s].insert(name: 'M1')")

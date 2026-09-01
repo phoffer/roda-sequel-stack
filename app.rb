@@ -40,6 +40,7 @@ class App < Roda
   plugin :public
   plugin :Integer_matcher_max
   plugin :typecast_params_sized_integers, :sizes=>[64], :default_size=>64
+  plugin :part
   plugin :hash_branch_view_subdir
   plugin :render,
     engine: 'slim',

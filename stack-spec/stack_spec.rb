@@ -111,7 +111,7 @@ describe 'roda-sequel-stack' do
       ]
       files.sort.must_equal [
         "./.env.rb", "./.gitignore", "./Gemfile", "./README.rdoc", "./Rakefile", "./app.rb",
-        "./assets/css/app.scss", "./config.ru", "./db.rb", "./migrate/001_tables.rb",
+        "./assets/css/app.scss", "./config.ru", "./db.rb", "./lib.rb", "./migrate/001_tables.rb",
         "./models.rb", "./models/model1.rb", "./routes/prefix1.rb", "./spec/coverage_helper.rb",
         "./spec/minitest_helper.rb", "./spec/model.rb", "./spec/model/model1_spec.rb",
         "./spec/model/spec_helper.rb", "./spec/web.rb", "./spec/web/prefix1_spec.rb",

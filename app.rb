@@ -6,7 +6,7 @@ require 'roda'
 require 'tilt'
 require 'tilt/slim'
 
-class App < Roda
+class AppWeb < Roda
   opts[:check_dynamic_arity] = false
   opts[:check_arity] = :warn
 

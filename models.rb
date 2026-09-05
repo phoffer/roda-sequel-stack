@@ -23,4 +23,5 @@ if ENV['RACK_ENV'] == 'development' || ENV['RACK_ENV'] == 'test'
   LOGGER = Logger.new($stdout)
   LOGGER.level = Logger::FATAL if ENV['RACK_ENV'] == 'test'
   DB.loggers << LOGGER
+  DB.extension :caller_logging
 end

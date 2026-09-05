@@ -9,6 +9,7 @@ end
 Sequel::Model.plugin :auto_validations
 Sequel::Model.plugin :require_valid_schema
 Sequel::Model.plugin :timestamps, update_on_create: true
+Sequel::Model.plugin :boolean_readers
 Sequel::Model.plugin :subclasses unless ENV['RACK_ENV'] == 'development'
 
 unless defined?(Unreloader)
